@@ -21,10 +21,10 @@ export class TodoController {
 
   @Get(':id')
   async find(@Param('id') id: string) {
-    return await this.service.findOne(id)
+    return await this.service.findOne(id);
   }
 
-  @Post(':id') 
+  @Post(':id')
   async update(@Param('id') id: string, @Body() UpdateTodoDto: UpdateTodoDto) {
     return await this.service.update(id, UpdateTodoDto);
   }
